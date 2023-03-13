@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+    <h1>Video Locadora</h1>
+    <hr>
+    <p>
+        Título do filme:
+        <input type="text" id="inTitulo">
+    </p>
+
+    <p>
+        Duração (min):
+        <input type="text" id="inDuracao">
+    </p>
+
+    <p>
+        <input type="button" value="Converter Horas em Minutos">
+    </p>
+    <p id="outTitulo"></p>
+    <p id="outReposta"></p>
+
+    <script>
+        function converterDuracao(){
+            // 1º Criar uma referência aos elementos da página
+            let inTitulo = document.getElementById('inTitulo')
+            let inDuracao = document.getElementById('inDuracao')
+            let outTitulo = document.getElementById('outTitulo')
+            let outReposta = document.getElementById('outReposta')
+
+            // Obter os valores dos campos de entrada
+            let titulo = inTitulo.value
+            let Duracao =  inDuracao
+
+            // Lógica de aplicação
+
+
+            // Alterar o contéudo do campo
+            outTitulo.textContent = titulo
+            outReposta.textContent = `Valor convertido ${duracao}`
+        }
+
+            // Criar uma referência para o botão da página 
+            let btnConverter =  document.getElementById('btnConverter')
+            // Atribuir um evento para o meu botão
+            btnConverter.addEventListener('click', converterDuracao)
+    </script>
+</body>
+</html>
